@@ -14,7 +14,7 @@
 
         /* Basic Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             scroll-behavior: smooth;
@@ -26,6 +26,7 @@
             padding: 1rem 0;
             position: fixed;
             width: 100%;
+            top: 0;
             z-index: 1000;
         }
 
@@ -65,7 +66,7 @@
             width: 0;
             height: 2px;
             background: #007BFF;
-            transition: width .3s;
+            transition: width 0.3s;
         }
 
         .nav-links a:hover::after {
@@ -126,10 +127,13 @@
             gap: 2rem;
         }
 
+        .portfolio-item {
+            animation: fadeIn 2s ease-in-out;
+        }
+
         .portfolio-item video {
             width: 100%;
             border-radius: 10px;
-            animation: fadeIn 2s ease-in-out;
         }
 
         form {
