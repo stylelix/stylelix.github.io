@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 
         /* Basic Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
             scroll-behavior: smooth;
@@ -24,6 +24,9 @@
             background: #333;
             color: #fff;
             padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
 
         nav {
@@ -33,6 +36,11 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
 
         .nav-links {
@@ -48,6 +56,20 @@
             color: #fff;
             text-decoration: none;
             font-size: 1rem;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #007BFF;
+            transition: width .3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .hero-section {
@@ -57,6 +79,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-top: 70px;
         }
 
         .hero-content h1 {
@@ -208,7 +231,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Stylelix. All rights reserved.</p>
+        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
     </footer>
 </body>
 </html>
