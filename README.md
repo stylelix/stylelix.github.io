@@ -235,7 +235,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+        <p>&copy; 2024 fortnitre. All rights reserved.</p>
     </footer>
 </body>
 </html>
