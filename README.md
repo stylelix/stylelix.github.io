@@ -1,22 +1,160 @@
-my-portfolio/
-│
-├── index.html
-├── styles/
-│   ├── main.css
-├── scripts/
-│   ├── main.js
-├── images/
-│   └── your-image.jpg
-└── assets/
-    └── your-video.mp4
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Editing Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .hero-section {
+            background: url('your-hero-image.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-in-out 1s;
+        }
+
+        .btn {
+            background: #007BFF;
+            color: #fff;
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            animation: fadeIn 2s ease-in-out 2s;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .about-section, .portfolio-section, .contact-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .about-section img {
+            max-width: 300px;
+            margin-top: 2rem;
+            border-radius: 50%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item video {
+            width: 100%;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        form input, form textarea {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,7 +180,7 @@ my-portfolio/
     <section id="about" class="about-section">
         <h2>About Me</h2>
         <p>Hello! I'm an editor with a passion for creating captivating content.</p>
-        <img src="images/your-image.jpg" alt="About Me">
+        <img src="your-image.jpg" alt="About Me">
     </section>
 
     <section id="portfolio" class="portfolio-section">
@@ -50,7 +188,7 @@ my-portfolio/
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <video controls>
-                    <source src="assets/your-video.mp4" type="video/mp4">
+                    <source src="your-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p>Project Description</p>
@@ -70,178 +208,7 @@ my-portfolio/
     </section>
 
     <footer>
-        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+        <p>&copy; 2024 Stylelix. All rights reserved.</p>
     </footer>
-
-    <script src="scripts/main.js"></script>
 </body>
 </html>
-
-
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.hero-section {
-    background: url('../images/hero-background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    background: #007BFF;
-    color: #fff;
-    padding: 0.8rem 1.2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #0056b3;
-}
-
-.about-section, .portfolio-section, .contact-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.about-section img {
-    max-width: 300px;
-    margin-top: 2rem;
-    border-radius: 50%;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.portfolio-item video {
-    width: 100%;
-    border-radius: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input, form textarea {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background: #007BFF;
-    color: #fff;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-form button:hover {
-    background: #0056b3;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.hero-content {
-    animation: fadeIn 2s ease-in-out;
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
-
-
